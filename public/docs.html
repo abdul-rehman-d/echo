@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Echo | Documentation</title>
+
+  <style>
+    code {
+      display: block;
+      max-width: max-content;
+      background-color: #eee;
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+    }
+    code span {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Echo API Documentation</h1>
+
+  <div>
+    <h2>Endpoints</h2>
+    <ul>
+      <li>
+        <p>
+          <strong>Path: </strong>
+          <code>/api/v1/echo</code>
+        </p>
+        <p>
+          <strong>Method: </strong>
+          <span>POST</span>
+        </p>
+        <p>
+          Sends back any body you send it. (Basically, "echo")
+        </p>
+        <p>
+          <strong>Try it: </strong>
+          <code id="cmd">
+            <span>curl -X POST \</span>
+            <span>-d '{ "message": "Hello world!" }' \</span>
+            <span>-H "Content-Type: application/json" \</span>
+            <span>$1/api/echo</span>
+          </code>
+        </p>
+      </li>
+    </ul>
+  </div>
+
+  <script>
+    const cmdCodeBlock = document.getElementById('cmd');
+    cmdCodeBlock.innerText = cmdCodeBlock.innerText.replace('$1', window.location.origin);
+  </script>
+</body>
+</html>
