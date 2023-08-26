@@ -1,0 +1,11 @@
+steps
+  - update system
+  - create user
+  - make him sudo
+  - set ufw
+  - install npm, node, nginx
+  - install pm2
+  - install git
+  - clone repo
+  - install dependencies
+  - run app
